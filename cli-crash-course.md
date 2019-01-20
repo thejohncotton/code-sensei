@@ -156,7 +156,16 @@ Add something interesting about yourself:
 # Version Control
 Right now our project is very basic. But we plan to build and make changes in the future. Let's turn our project folder into a git repository that will track our changes and allow us to organize them into meaningful sets of changes.
 
-####Initialize
+#### Configure git user settings
+Time to set the username for git on our system. Be sure to use the same email address you used with your github account.
+
+    git config --global user.email "you@example.com"
+
+Next we need to set the name for our user.
+
+     git config --global user.name "Your Name"
+
+#### Initialize
 
     git init
 
@@ -200,6 +209,7 @@ Add a new line to your about.txt file
 
 #### Registering changes as a commit
 A commit is a way to register changes in our code that go together. We want to commit the changes into our history so we can fully restore our projects back to the state of these commits later or to tell other people about what changes we made to our code.
+
 
 #### Commit
 
@@ -258,8 +268,10 @@ We are now ready to send our local code to github.
 
 Where git push is the command, and origin is the remote (that url we pasted in) and master is the branch (a little beyond the scope of this workshop).
 
+You may be prompted for your username and password. Enter those to continue.
+
 Head back over to [github](https://github.com) and refresh your repository.
 
 *Voila*
 
-Your code is now connected!
+Your code is now connected to the cloud!
