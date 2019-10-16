@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Store</title>
+    <!-- <script src="index.js"></script> -->
+   
+   
+   
+   
+   <script>
+        var data, id, name, description, photoUrl
+        
+   fetch('https://api.airtable.com/v0/appzdKFqKgoEpr8TE/Table%201?api_key=keyRxxn8FjsNl38Dc')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    data = myJson 
+    name = data.records[1].fields["Name"]
+    description = data.records[1].fields["Description"]
+    photoUrl =  data.records[1]["fields"]["photo-url"]
+    document.querySelector("#content").innerHTML = `<h1>${name}, for sale: ${description}</h1>` + '<img src ="' + `${photoUrl}` + '" width="250px">'
+    console.log(JSON.stringify(data));
+  });
+
+</script>
+</head>
+<body>
+    <div id="content"> 
+
+      
+        
+    </div>
+    <script>
+    // var product = document.querySelector('#content').append(data.records[0].Product)
+    //   var id = data.records[0].id
+             
+            // document.querySelector("#content").append(`<h1>${name}, for sale: ${description}</h1>` + '<img src ="' + `${photoUrl}` + '">') 
+  
+    </script>
+</body>
+
+</html>
